@@ -1,2 +1,2 @@
-# solar_monitoring_system
-A smart solar tracking system using Arduino, LDRs, and servo motors for dual-axis sun tracking, integrated with sensors for temperature, humidity, rain, and wind monitoring. IoT-based remote monitoring via ESP8266 enhances efficiency, automates panel positioning, and improves energy output.
+📡 Smart Solar Panel Tracking and Weather Monitoring System
+This project presents an IoT-based dual-axis solar tracking system designed to maximize solar energy efficiency by dynamically adjusting panel orientation throughout the day. It features integrated environmental sensors (LDR, temperature, humidity, rain, and wind) for real-time weather responsiveness. With Arduino-based control, servo motor actuation, and cloud connectivity (ESP8266), the system enables remote monitoring and control via a web dashboard. The goal is to improve energy capture, reduce power loss, and contribute to sustainable energy adoption.
