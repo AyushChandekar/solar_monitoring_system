@@ -90,13 +90,21 @@ void handleClient(WiFiClient &client) {
     client.println("<!DOCTYPE html><html><head>");
     client.println("<title>SOLAR MONITOR</title>");
     client.println("<meta http-equiv=\"refresh\" content=\"3\">");
+    client.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
     client.println("<link href=\"https://fonts.googleapis.com/css2?family=Merriweather&display=swap\" rel=\"stylesheet\">");
     client.println("<style>");
     client.println("body { font-family: 'Merriweather', serif; text-align: center; margin-top: 30px; background: #dbdbff; }");
     client.println("h1 { color: #444; font-size: 36px; margin-bottom: 20px; }");
-    client.println(".data { font-size: 24px; margin: 20px; padding: 20px;");
-    client.println("background: #f14a4a; display: inline-block; border-radius: 10px; border: 3px solid white; color: white; }");
-    client.println(".github-logo { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); }");
+    client.println(".data { font-size: 24px; margin: 20px; padding: 20px; background: #f14a4a; display: inline-block; border-radius: 10px; border: 3px solid white; color: white; }");
+    client.println(".github-logo { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 15px; padding: 8px; background: white; }");
+    client.println(".github-logo img { width: 60px; height: 60px; border-radius: 15px; }");
+    client.println("@media (max-width: 600px) {");
+    client.println("body { margin-top: 15px; }");
+    client.println("h1 { font-size: 28px; margin-bottom: 15px; }");
+    client.println(".data { font-size: 18px; margin: 10px; padding: 12px; }");
+    client.println(".github-logo { top: 45%; border-radius: 20px; }"); // Adjust position for mobile
+    client.println(".github-logo img { width: 50px; height: 50px; border-radius: 20px; }");
+    client.println("}");
     client.println("</style></head><body>");
     client.println("<h1>SOLAR MONITOR</h1>");
     client.println("<div class=\"data\">");
@@ -104,10 +112,12 @@ void handleClient(WiFiClient &client) {
     client.println("<p><strong>Rain Status:</strong> " + rainData + "</p>");
     client.println("</div>");
     client.println("<a href=\"https://github.com/AyushChandekar/solar_monitoring_system\" target=\"_blank\" class=\"github-logo\">");
-    client.println("<img src=\"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png\" width=\"60\" height=\"60\" alt=\"GitHub Logo\">");
+    client.println("<img src=\"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png\" alt=\"GitHub Logo\">");
     client.println("</a>");
     client.println("</body></html>");
 }
+
+
 
 
     client.stop();
