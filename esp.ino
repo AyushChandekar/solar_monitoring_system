@@ -103,7 +103,7 @@ void handleClient(WiFiClient &client) {
     client.println("<p><strong>Temperature:</strong> " + tempData + " °C</p>");
     client.println("<p><strong>Rain Status:</strong> " + rainData + "</p>");
     client.println("</div>");
-    client.println("<a href=\"https://github.com/AyushChandekar/Ayush-Chandekar-Portfolio\" target=\"_blank\" class=\"github-logo\">");
+    client.println("<a href=\"https://github.com/AyushChandekar/solar_monitoring_system" target=\"_blank\" class=\"github-logo\">");
     client.println("<img src=\"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png\" width=\"60\" height=\"60\" alt=\"GitHub Logo\">");
     client.println("</a>");
     client.println("</body></html>");
